@@ -1,16 +1,17 @@
  
-// The latitude and longitude of your business / place
-var position = [33.214695, -97.128207];
- 
 function showGoogleMaps() {
  
-    var latLng = new google.maps.LatLng(position[0], position[1]);
+    var latLng = new google.maps.LatLng(33.214695, -97.128207);
  
     var mapOptions = {
+				scrollwheel: false,
+				navigationControl: false,
+				mapTypeControl: false,
+				draggable: false,
         zoom: 16, // initialize zoom level - the max value is 21
-        streetViewControl: false, // hide the yellow Street View pegman
-        scaleControl: true, // allow users to zoom the Google Map
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
+				streetViewControl: false, // hide the yellow Street View pegman
+				scaleControl: false, // allow users to zoom the Google Map
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: latLng
     };
  
